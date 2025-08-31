@@ -1,3 +1,6 @@
+# pychatbot_tran_pasquet--saletes_int2
+Python Project - L1 (Semester 1)
+
 ## Name of project team members :
 
 TRAN Kim Lan
@@ -6,22 +9,35 @@ PASQUET--SALETES Axel
 
 ## Instructions for use :
 
-First, upon running the main program, it'll be indicated that: "All files [that we were provided] have been converted into lowercase" and "For each file, all the punctuation characters have been removed".
+## Main Menu:
 
-Then, a menu will be displayed guiding the user to choose an option between 0 and 9.
-Enter a number to perform the corresponding action:
+A menu will be displayed guiding the user to choose an option between 0 and 2.
+Enter a number to perform the corresponding actions:
 
 0. Exit the program
+1. Access to Part I Functionalities
+2. Access to Chatbot Mode
 
-1. Display the list of presidents
-2. Display their first names
-3. Indicate the unimportant words
-4. Indicate the first 10 words with the highest TF-IDF scores
-5. Indicate the most repeated word (by a President that the user choose beforehand)
-6. Indicate which president(s) mention(s) 'nation'
-7. Indicate which president mentions the most 'nation'
-8. Indicate the first president to talk about climate and/or ecology
-9. Indicate which word(s) all the president mention (Excepti the 'unimportant' words).
+If the user enters a number other than those specified, it will display "Invalid choice. Please enter a number between 0 and 2".
+
+## Part I Functionalities (Option 1):
+
+If the user enters '1.', another menu will be displayed. The user then has to choose an option between 0 and 7. Enter a number to perform the corresponding actions:
+
+0. Return to the main menu
+1. Display the list of presidents from the document corpus and their first names
+2. Display all the unimportant words
+3. Display the first 10 words with the highest TF-IDF scores
+4. Display the most repeated word by the President of your choice (Excepti the 'unimportant' words)
+5. Display which president(s) mention(s) the word of your choice and among them which one mentions it the most
+6. Display the first president to mention the word of your choice
+7. Display which word(s) all the president mention (Excepti the 'unimportant' words)
+
+If the user enters a number apart from those asked, it will display "Invalid choice. Please enter a number between 0 and 7".
+
+## Chatbot Mode (Option 2):
+
+If the user enters '2.', the program will prompt the user to enter their question. After entering the question, the program will provide a proper answer.
 
 ## Dependencies to be installed :
 
@@ -49,6 +65,13 @@ Directory called "speeches", it should contain 8 text files:
   
 ## List of known bugs :
 
-When it comes to special characters in uppercase (ex: À), they're not converted.
+Bugs on the following functions:
 
-When the user chooses option 4. Indicate the first 10 words with the highest TF-IDF scores, there's a slight delay of time.
+-most_relevant_doc(tf_idf_matrix, question_vector,list_files)
+
+-question_tfidf_score(cleaned_question, directory, extension)
+
+-answer_generation(directory, extension, cleaned_question, tf_idf_matrix, question_vector, list_files)
+
+-refining_answer(directory, extension, question, tf_idf_matrix, question_vector, list_files)
+
