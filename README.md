@@ -1,6 +1,3 @@
-# pychatbot_tran_pasquet--saletes_int2
-Python Project - L1 (Semester 1)
-
 ## Name of project team members :
 
 TRAN Kim Lan
